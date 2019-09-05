@@ -136,7 +136,7 @@ func (p *Processor) Unmarshal(data []byte) (interface{}, error) {
 	if len(m) != 1 {
 		return nil, errors.New("invalid json data")
 	}
-
+	log.Debug(string(data))
 	for msgID, data := range m {
 		i, ok := p.msgInfo[msgID]
 		if !ok {
@@ -169,5 +169,6 @@ func (p *Processor) Marshal(msg interface{}) ([][]byte, error) {
 	// data
 	m := map[string]interface{}{msgID: msg}
 	data, err := json.Marshal(m)
+	log.Debug(string(data))
 	return [][]byte{data}, err
 }
