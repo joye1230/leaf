@@ -2,8 +2,8 @@ package g
 
 import (
 	"container/list"
-	"github.com/name5566/leaf/conf"
-	"github.com/name5566/leaf/log"
+	"github.com/joye1230/leaf/conf"
+	"github.com/joye1230/leaf/log"
 	"runtime"
 	"sync"
 )
